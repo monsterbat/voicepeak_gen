@@ -1,0 +1,24 @@
+[project]
+name = "voicepeak-gen"
+version = "0.1.0"
+description = "Pipeline that turns a script (CSV/JSON) into a merged audio file via Voicepeak's CLI."
+readme = "README.md"
+authors = [
+    { name = "SC Hsiao", email = "n32242725@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+    "rich>=15.0.0",
+    "typer>=0.25.1",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+]
+
+[project.scripts]
+voicepeak-gen = "voicepeak_gen.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.10.11,<0.11.0"]
+build-backend = "uv_build"

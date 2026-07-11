@@ -1,0 +1,20 @@
+# Copy to ~/.config/voicepeak_gen/config.yaml and edit.
+# Anything you omit falls back to the bundled defaults (see config.py).
+
+voicepeak_path: /Applications/voicepeak.app/Contents/MacOS/voicepeak
+ffmpeg_path: /opt/homebrew/bin/ffmpeg
+
+# Shorthand names you can put in the first CSV column instead of full narrator names.
+narrator_aliases:
+  moca: Miyamai Moca
+  rikka: Koharu Rikka
+  frimomen: Frimomen
+  茉歌: Miyamai Moca
+  六花: Koharu Rikka
+
+defaults:
+  speed: 100        # 50–200, 100 = normal
+  pitch: 0          # -300 to 300
+  gap_ms: 300       # silence between segments
+  output_format: wav  # wav | mp3
+  max_chars: 140    # Voicepeak CLI hard limit; don't raise above 140

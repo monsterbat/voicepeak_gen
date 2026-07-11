@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# macOS
+.DS_Store
+
+# Voicepeak outputs / temp working dirs
+outputs/
+temp/
+*.wav
+*.mp3
+
+# Local config overrides
+config.local.yaml
