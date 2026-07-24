@@ -34,3 +34,9 @@
 - [x] Pipeline 全程 smoke test 通過
 - [x] 語音工作室 studio（FastAPI 即時試聽調參存配方）＋ 15 種語氣 × 3 角色配方預設（2026-07-11）
 - [x] synthesizer 全域鎖＋重試（扛 Voicepeak 間歇 segfault，2026-07-11）
+
+## 未來方向(2026-07-24 SC 口述)
+
+- **終極目的:電子書 → 有聲書**(含字幕/讓內容能開口),產物接電子書流(內嵌語音 HTML → BOOX_sync → 電子書)。
+- **聲源擴張:不只 VOICEPEAK**——接開源聲源(GPT-SoVITS、VOICEVOX 等)。開源引擎無授權限制,可直接在 Mac mini 批次跑。
+- **主機策略:** 現階段 MacBook 操作(VOICEPEAK 授權在此,1 授權=同時 1 台);當進入「mini 自動化批次」階段 → 開源聲源直上 mini,VOICEPEAK 授權屆時再搬(MacBook 解除啟用 → mini 啟用)。
