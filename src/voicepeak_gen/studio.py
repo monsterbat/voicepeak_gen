@@ -129,7 +129,7 @@ def build_app(config: Config, recipes_dir: Path):
     return app
 
 
-def run_studio(config: Config, recipes_dir: Path, host: str = "127.0.0.1", port: int = 8000) -> None:
+def run_studio(config: Config, recipes_dir: Path, host: str = "127.0.0.1", port: int = 8010) -> None:
     import uvicorn
 
     app = build_app(config, recipes_dir)

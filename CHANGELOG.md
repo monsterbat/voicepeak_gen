@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026-07-27 — studio 預設 port 8000 → 8010(解掉與 voice_to_text 的撞號)
+
+**Why:** 盤點全機 port 時發現 `voicepeak-gen studio` 與 `Program/voice_to_text` 的後端 API **都用 8000**。兩個同時開,第二個會直接起不來,而症狀(「昨天還好好的今天打不開」)很難聯想到是撞號。voice_to_text 的 8000 寫進了 `preview.sh` 的清理邏輯、動它成本較高,所以改這邊。
+
+**What:** 預設 port 改 `8010`——`cli.py` 的 `--port` 預設值、`studio.py` 的 `run_studio()` 參數,以及 README／CLAUDE.md 的三處說明。`--port` 參數照舊可覆寫。
+
+**連帶(跨專案規則):** 新增 `Workspace/notes/連接埠分配表.md`(帳本:誰佔哪個號、禁用區)+ `Program/CLAUDE.md` §九「連接埠不准隨手挑」。**以後開會監聽 port 的服務要先查表、挑完登記。** 順帶記錄:`5000`/`7000` 被 macOS AirPlay 接收器佔用,是禁用區。
+
+
 ## 2026-07-11 — 語音工作室（voice studio）+ 呼叫層抗當機
 
 **Why:** 要把小說做成有聲書，得先替每個角色×每種語氣調出對味的參數。Voicepeak 的情緒是主觀美學、網路上沒有權威參數表，唯一可靠辦法是「試聽→微調→再聽」。手動在 GUI 一句句試太慢，做成本地工具讓 SC 拉 slider 即時聽、存配方。

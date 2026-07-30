@@ -105,7 +105,7 @@ def emotions(
 def studio(
     recipes_dir: Path = typer.Option(Path("recipes"), "--recipes-dir", help="存試聽定案的情緒配方 JSON 的資料夾。"),
     host: str = typer.Option("127.0.0.1", "--host"),
-    port: int = typer.Option(8000, "--port"),
+    port: int = typer.Option(8010, "--port"),
     config_path: Path | None = typer.Option(None, "--config"),
 ):
     """啟動本地語音工作室：即時拉 slider 調情緒/語速/音高、聽、存配方。"""

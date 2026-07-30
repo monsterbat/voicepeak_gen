@@ -63,7 +63,7 @@ rikka,こんにちは、私は小春六花です。
 要替角色調出「暴怒」「溫柔」「哀傷」等對味的語氣時，用這個：
 
 ```bash
-voicepeak-gen studio          # 開 http://127.0.0.1:8000/
+voicepeak-gen studio          # 開 http://127.0.0.1:8010/
 ```
 
 瀏覽器裡：**選角色 → 選目標語氣（載入內建起始配方）→ 拉 slider（情緒混合／語速／音高）→ ▶ 即時聽 → 💾 存**。存出來的配方寫進 `recipes/<narrator>.json`，成為你自己的「情緒配方表」，之後做整章有聲書逐句套用、保持全書語氣一致。
@@ -76,7 +76,7 @@ voicepeak-gen studio          # 開 http://127.0.0.1:8000/
 
 ```bash
 voicepeak-gen synth <input> -o <output> [--gap-ms 300] [--keep-temp]
-voicepeak-gen studio [--port 8000] [--recipes-dir recipes]   # 本地語音工作室
+voicepeak-gen studio [--port 8010] [--recipes-dir recipes]   # 本地語音工作室
 voicepeak-gen check <input>          # 驗證輸入檔（不合成）
 voicepeak-gen narrators              # 列出可用 narrator + alias
 voicepeak-gen emotions <narrator>    # 列出某 narrator 的 emotion 選項

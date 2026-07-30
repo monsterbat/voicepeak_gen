@@ -49,7 +49,7 @@ INPUT (.csv / .json)
 4. 用 `voicepeak-gen synth examples/foo.csv -o outputs/foo.wav` 跑完整 pipeline
 
 ### 接到「要調某角色的語氣 / 試聽情緒」的請求時
-1. `voicepeak-gen studio` 啟動本地工作室（預設 `http://127.0.0.1:8000/`），`open` 給使用者。
+1. `voicepeak-gen studio` 啟動本地工作室（預設 `http://127.0.0.1:8010/`），`open` 給使用者。
 2. 情緒是主觀的、**沒有標準參數**：先載 `studio_presets.py` 的起始配方，讓使用者試聽微調、存回 `recipes/<narrator>.json`。
 3. **每角色只有 4–5 個原生情緒**（`--list-emotion` 撈），十幾種語氣靠「原生情緒混合＋語速＋音高」合成。新增/改配方 → 改 `studio_presets.py`。
 4. ⚠️ 呼叫前確認 **Voicepeak GUI 沒開**（兩個實例會 crash）；synthesizer 已有鎖＋重試扛間歇性 segfault。
