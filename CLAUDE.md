@@ -1,5 +1,22 @@
 # voicepeak_gen — AI 入口指令
 
+## 🌐 待辦與進度:正本是心智圖(MUST)
+
+**這個資料夾的待辦、進度、為什麼這樣定,正本都在心智圖**
+`Workspace/mindmaps/全局總覽圖.json`,⛔ 不是這裡的 CHANGELOG,也不是任何一條對話。
+
+| 你要做什麼 | 指令 |
+|---|---|
+| 查「這件事在圖上是哪一顆 / 為什麼這樣定」 | `python3 ~/Documents/SC_Hsiao/Program/mindmap/mm.py find <關鍵字>` → `show <id>` |
+| **SC 說某件事做完了** | `mm.py set-status <id> 完成` —— ⛔ 只在對話裡回「好」等於什麼都沒發生 |
+| 新的計畫 / 拍板了一個決定 | `mm.py add-todo <父id> "…" --why "…"` / `mm.py explain <id> "…"` |
+| 收工前想確認有沒有漏 | `python3 ~/Documents/SC_Hsiao/Program/mindmap/drift_check.py` |
+
+- ⛔ **不准直接 Edit 那份 JSON**(會蓋掉別條對話、id 撞號)。一律走 `mm.py`。
+- **標完成之後,它會印出「這件事在哪些 TODO.md 裡還有沒打勾的副本」→ 一併清掉。**
+  2026-08-22 就是因為沒清,富邦 J 卡在圖上早就完成,早報還天天撈出來問 SC。
+- 完整規則:`~/claude-config/macos.md` §十九。
+
 ## 這個專案是什麼
 
 把「劇本」（CSV 或 JSON，含話者+台詞）轉成一個合併好的音檔，全程用 Voicepeak CLI + ffmpeg，不需要打開 Voicepeak GUI。
