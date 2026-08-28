@@ -20,3 +20,6 @@ temp/
 
 # Local config overrides
 config.local.yaml
+
+# Codex 的規則產物(由 ~/claude-config/gen_agents_md.sh 產生,正本是 core.md)
+AGENTS.md
